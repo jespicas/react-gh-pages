@@ -2,30 +2,41 @@
   "homepage": "http://jespicas.github.io/react-gh-pages",
   "name": "react-gh-pages",
   "version": "0.1.0",
+  "license": "Apache-2.0",
   "private": true,
   "dependencies": {
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "react-scripts": "^2.1.5"
+    "bootstrap": "4.2.1",
+    "jsnes": "git://github.com/jespicas/jsnes.git",
+    "node-sass": "^4.11.0",
+    "prop-types": "^15.6.2",
+    "raven-js": "^3.27.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-ga": "^2.5.7",
+    "react-router-dom": "^4.3.1",
+    "reactstrap": "^7.1.0",
+    "ringbufferjs": "^1.1.0"
+  },
+  "devDependencies": {
+    "canvas": "^2.3.1",
+    "gh-pages": "^2.0.1",
+    "prettier": "^1.16.4",
+    "prettier-check": "^2.0.0",
+    "react-scripts": "2.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "prettier-check src/**/*.js && react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "format": "prettier --write src/**/*.js",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "gh-pages": "^2.0.1"
-  }
+  ]
 }
